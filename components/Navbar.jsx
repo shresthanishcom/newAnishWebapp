@@ -9,7 +9,7 @@ export default function Navbar() {
   const path = router.asPath.slice(1);
 
   const activeTextColor = "text-yellow-200 animate-bounce";
-  const NavItemLists = ["Home", "Photos", "Services", "AboutUs", "Projects"];
+  const NavItemLists = ["Home", "Projects", "Photos", "Resume", "AboutMe"];
 
   const [sideMenu, setSideMenu] = useState(false);
 

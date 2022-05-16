@@ -1,0 +1,10 @@
+.box{
+    display: block;
+    height:400px;
+    width:400px;
+    border:2px solid black;
+    box-shadow: 5px 10px 20px 2px black ;
+&:hover{
+    transform: scale(1.1,1.1);
+}
+}
