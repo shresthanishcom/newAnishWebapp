@@ -8,8 +8,13 @@ export default function projects() {
       <div className={`${Style.container} mt-3`}>
         <div className="flex flex-wrap justify-around items-center w-full text-orange-700 ">
           <div className={`${Style.box} w-2/4 self-center text-center `}>
-            <a target="_blank" href="https://anish-ecommerce.netlify.app">
+            <a
+              target="_blank"
+              href="https://anish-ecommerce.netlify.app"
+              rel="noreferrer"
+            >
               <Image
+                alt="ecommerce website link"
                 src="/ecommercePreview.png"
                 height="400"
                 width="400"
@@ -23,8 +28,10 @@ export default function projects() {
             <a
               target="_blank"
               href="https://news-portal-hd39p6rd6-shresthanishcom.vercel.app/specificnews/2022-04-21T03:30:27Z"
+              rel="noreferrer"
             >
               <Image
+                alt="newsportal website "
                 src="/newsportalPreview.png"
                 height="400"
                 width="400"

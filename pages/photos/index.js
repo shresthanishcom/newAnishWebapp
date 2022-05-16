@@ -7,6 +7,7 @@ export default function photos() {
     for (let i = 1; i <= 11; i++) {
       images.push(
         <Image
+          alt={`${i} `}
           src={`/${i}.jpg`}
           width={400}
           height={400}

@@ -64,9 +64,9 @@ export default function HomePage() {
           width="450px"
         />
         <div className="image-container self-center  ">
-          <Parallax translateX={["-100px", "25px"]}>
+          <Parallax translateX={["-100px", "0px"]}>
             <div className={`text-2xl sm:text-4xl font-serif md:text-7xl`}>
-              "Be greedy with time not money"
+              {"Be greedy with time not money"}
               <div className="text-xl md:text-4xl font-bold flex justify-end">
                 Anish Shrestha
               </div>

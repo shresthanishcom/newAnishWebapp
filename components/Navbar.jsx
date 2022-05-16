@@ -3,6 +3,10 @@ import Style from "../styles/Navbar/Navbar.module.scss";
 import { useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
+import Image from "next/image";
+
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBars } from "@fortawesome/free-solid-svg-icons";
 
 export default function Navbar() {
   const router = useRouter();
@@ -26,6 +30,7 @@ export default function Navbar() {
     return NavItemLists.map((NavItem, index) => {
       return (
         <Link
+          passHref
           key={index}
           href={`/${NavItem === "Home" ? "" : NavItem.toLowerCase()}`}
         >
@@ -47,7 +52,7 @@ export default function Navbar() {
   return (
     <nav className="bg-black">
       <div className="container m-auto flex items-center justify-between ">
-        <Link href="/">
+        <Link passHref href="/">
           <div className="font-mono text-xl m-4 p-3 nav-logo  whitespace-nowrap w-min bg-gradient-to-r from-red-100 to-red-300 rounded-full animate-pulse cursor-pointer">
             Anish Shrestha
           </div>
@@ -60,12 +65,12 @@ export default function Navbar() {
         >
           {renderList()}
         </ul>
-        <button
+        <div
           onClick={toggleMenu}
-          className="block sm:hidden ml-auto bg-blue-200 active:bg-blue-400"
+          className="block sm:hidden ml-auto h-16 w-12 text-white active:text-orange-200"
         >
-          <img className="w-14" src="hamburgerMenu.png" alt="hamburger menu" />
-        </button>
+          <FontAwesomeIcon icon={faBars} />
+        </div>
       </div>
     </nav>
   );
