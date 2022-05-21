@@ -9,7 +9,9 @@ export default function Home() {
         <meta name="description" content="Anish Shrestha web app" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <HomePage />
+      <main>
+        <HomePage />
+      </main>
     </div>
   );
 }

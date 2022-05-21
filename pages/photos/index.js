@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Head from "next/head";
 import Style from "../../styles/photos.module.scss";
 
 export default function photos() {
@@ -19,10 +20,16 @@ export default function photos() {
     return images;
   }
   return (
-    <div
-      className={`${Style.photosContainer} flex justify-center items-center flex-wrap`}
-    >
-      {renderPhotos()}
-    </div>
+    <>
+      <Head>
+        <title>Anish Shrestha / Photos</title>
+        <meta name="description" content="Photos of Anish Shrestha" />
+      </Head>
+      <div
+        className={`${Style.photosContainer} flex justify-center items-center flex-wrap`}
+      >
+        {renderPhotos()}
+      </div>
+    </>
   );
 }

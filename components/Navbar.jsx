@@ -1,5 +1,4 @@
 import React from "react";
-import Style from "../styles/Navbar/Navbar.module.scss";
 import { useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
@@ -7,6 +6,8 @@ import Image from "next/image";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
+
+import Style from "../styles/Navbar/Navbar.module.scss";
 
 export default function Navbar() {
   const router = useRouter();
@@ -41,7 +42,7 @@ export default function Navbar() {
                 : "" || (path === "" && NavItem === "Home")
                 ? activeTextColor
                 : ""
-            } hover:text-yellow-200 hover:animate-bounce `}
+            } m-0 p-0 hover:text-yellow-200 hover:animate-bounce `}
           >
             {NavItem}
           </li>
@@ -57,17 +58,21 @@ export default function Navbar() {
             Anish Shrestha
           </div>
         </Link>
-        <ul
+        <div
           id="nav-lists"
+          onClick={toggleMenu}
           className={`${sideMenu ? Style.showMenu : Style.hideMenu} ${
             Style.navLinks
-          } nav-lists  grid absolute w-3/4 h-full gap-2 sm:static sm:flex sm:w-4/5 items-center justify-around sm:rounded-full bg-gradient-to-r from-red-400 to-green-300 cursor-pointer z-10`}
+          } nav-lists absolute sm:static h-full w-full  z-50`}
         >
-          {renderList()}
-        </ul>
+          <ul className=" absolute top-0 right-0 w-3/4 h-screen sm:h-auto sm:w-full grid sm:rounded-full  sm:relative sm:flex items-start sm:items-center gap-0 content-around text-center sm:justify-around cursor-pointer  bg-gradient-to-r from-red-400 to-green-300 ">
+            {renderList()}
+          </ul>
+        </div>
+
         <div
           onClick={toggleMenu}
-          className="block sm:hidden ml-auto h-16 w-12 text-white active:text-orange-200"
+          className=" sm:hidden flex items-center ml-auto h-16 w-8 text-white active:text-orange-200"
         >
           <FontAwesomeIcon icon={faBars} />
         </div>
